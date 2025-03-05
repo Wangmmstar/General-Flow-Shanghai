@@ -15,6 +15,11 @@ conda create -n gflow python=3.9
 conda activate gflow
 pip install -r requirement.txt
 conda install -y pytorch=1.10.1 torchvision cudatoolkit=11.3 -c pytorch -c nvidia
+
+if error happens related to numpy head num error:
+1. pip uninstall numpy
+2. pip install numpy==1.25.2
+
 pip install torch-scatter -f https://data.pyg.org/whl/torch-1.10.1+cu113.html
 ```
 Then, follow the `install.sh` script to install the PointNeXt dependencies.
