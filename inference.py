@@ -1,3 +1,7 @@
+#### flow genration ###########
+ ##### get prediction () ####input: point cloud (pos), feature (feat),  query points (query_np), text instrutcions (text_feat)  ########################    -----> traj_prediction
+
+
 import argparse
 import yaml
 import os
