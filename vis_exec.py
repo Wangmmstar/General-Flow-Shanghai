@@ -1,3 +1,12 @@
+##### Loading and Visualizing Predicted Motion Trajectories
+
+########## Aligning the End-Effector with Predicted Motion
+
+########### Computing Transformations via caculate_align_mat()
+
+
+
+
 import argparse
 import open3d as o3d
 import numpy as np
@@ -178,7 +187,7 @@ def visualization_exec(args, result):
         # R: (1, 3, 3)
         # t: (1, 3, 1)
         nxt = (np.matmul(R[0], pos[:, np.newaxis]) + t[0]).squeeze(-1)
-        mesh_frame, mesh_arrow, mesh_sphere_begin, mesh_sphere_end = get_arrow(pos, nxt)
+        mesh_frame, mesh_arrow, mesh_sphere_begin, mesh_sphere_end = get_arrow(pos, nxt)    ### visualize the motion using oepn3d
         mesh_arrow.paint_uniform_color(color_motion) 
         vis.add_geometry(mesh_arrow)
         mesh_sphere_end.paint_uniform_color(color_motion)
